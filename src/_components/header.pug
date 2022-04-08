@@ -1,0 +1,28 @@
+.header-wrap
+  .container
+    header.header
+      a(href="javascript:void(0);").logo-header
+        picture.header-picture
+          source.header-picture__source(srcset='./img/logo-min.svg' media='(max-width: 990px)')
+          img.img-logo(loading='lazy' src='./img/logo.svg' alt='' title='')
+      .header-contact.d-none.d-lg-block
+        button(type='button').button.header-contact__button Заказать звонок
+        a(href="tel:+74212253085").header-contact__tel +7 (4212) 25-30-85
+      nav.menu-header.d-none.d-lg-block
+        ul.menu-header__list
+          li.menu-header__item
+            a(href="javascript:void(0);").menu-header__link О студии
+          li.menu-header__item
+            a(href="javascript:void(0);").menu-header__link Портфолио
+          li.menu-header__item
+            a(href="javascript:void(0);").menu-header__link Наши услуги
+          li.menu-header__item
+            a(href="javascript:void(0);").menu-header__link Новости
+          li.menu-header__item
+            a(href="javascript:void(0);").menu-header__link Отзывы
+          li.menu-header__item
+            a(href="javascript:void(0);").menu-header__link Контакты
+      a(href="javascript:void(0);").humb-header.d-block.d-lg-none
+        img(src='./img/humb.svg' alt='', title='').img-humb
+
+

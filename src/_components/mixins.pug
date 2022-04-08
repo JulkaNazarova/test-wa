@@ -1,0 +1,53 @@
+mixin accord-block-items
+  each val, index in ['Анализ Целевой Аудитории', 'ПОДГОТОВКА ТЗ', 'ПОДПИСАНИЕ ДОГОВОРА И ОПЛАТА', 'РАЗРАБОТКА САЙТА ИНТЕРНЕТ-МАГАЗИНА', 'НАСТРОЙКА И НАПОЛНЕНИЕ ИНТЕРНЕТ-МАГАЗИНА', 'ПРИВЛЕЧЕНИЕ ПОКУПАТЕЛЕЙ']
+    .accord-block__item.accord-wrap--js
+      .accord-block__title.accord-title--js
+        .accord-block__name--wrap
+          .accord-block__num 0!{index + 1}
+          .accord-block__name !{val}
+      .accord-block__content.accord-block--js
+        | Подключите один из надежных сервисов: Яндекс.Деньги, Яндекс.Касса, PayPal, Robokassa или Stripe, и ваши покупатели смогут безопасно оплатить товар или услугу картой Visa или Mastercard, Яндекс.Деньгами, со счета мобильного телефона, через Сбербанк Онлайн или Альфа Клик.
+
+mixin pay-block-item-active(data)
+  .pay-block__item.tabs__block--js.active(data-thumb=`tab-${data.index}`)
+    .pay-block__img--wrap
+      picture.pay-block__img-picture
+        source.pay-block__img-source(srcset=`./img/pay-img-min-${data.index}.png` media='(max-width: 990px)')
+        img.pay-block__img(class=`pay-block__img-${data.index}` src=`./img/pay-img-${data.index}.png` alt='', title='')
+    .pay-block__info
+      .pay-block__title !{data.title}
+      .pay-block__desc=data.desc
+      .pay-block__banks.d-none.d-lg-flex
+        .pay-block__bank-img
+          img(src='./img/bank-sb.png' alt='', title='').pay-block__bank
+        .pay-block__bank-img
+          img(src='./img/bank-ya.png' alt='', title='').pay-block__bank
+        .pay-block__bank-img
+          img(src='./img/bank-rk.png' alt='', title='').pay-block__bank
+
+
+mixin pay-block-item(data)
+  .pay-block__item.tabs__block--js(data-thumb=`tab-${data.index}`)
+    .pay-block__img--wrap
+      picture.pay-block__img-picture
+        source.pay-block__img-source(srcset=`./img/pay-img-min-${data.index}.png` media='(max-width: 990px)')
+        img.pay-block__img(class=`pay-block__img-${data.index}` src=`./img/pay-img-${data.index}.png` alt='', title='')
+    .pay-block__info
+      .pay-block__title !{data.title}
+      .pay-block__desc=data.desc
+      .pay-block__banks.d-none.d-lg-flex
+        .pay-block__bank-img
+          img(src='./img/bank-sb.png' alt='', title='').pay-block__bank
+        .pay-block__bank-img
+          img(src='./img/bank-ya.png' alt='', title='').pay-block__bank
+        .pay-block__bank-img
+          img(src='./img/bank-rk.png' alt='', title='').pay-block__bank
+        
+        
+mixin steps-item-add
+  a(href="javascript:void(0);").steps-item__add.popup-open
+    .steps-item__add-text Подробнее
+    .steps-item__plus 
+
+      
+  
